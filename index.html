@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirect Confirmation</title>
+  <title>Yes or No</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
@@ -36,7 +36,9 @@
     }
 
     function goBack() {
-      window.history.back();
+      var params = new URLSearchParams(window.location.search);
+      var referrerURL = document.referrer;
+      window.location.href = referrerURL;
     }
   </script>
 
